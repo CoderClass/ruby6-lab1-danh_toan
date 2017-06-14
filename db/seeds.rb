@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+(0..10).each do |i|
+	photo = Photo.create({username: Faker::Name.name, caption: Faker::Lorem.sentence, url:"http://lorempixel.com/400/200/sports/#{i}", likes_count: Faker::Number.number(5)})
+end
